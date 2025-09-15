@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile First - Base styles for mobile devices */
+@media (max-width: 374px) {
+  .mobile-container {
+    padding: 0 12px;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.75rem;
+  }
+  
+  .mobile-stats-grid {
+    gap: 8px;
+  }
+}
+
+/* Small Mobile - 375px to 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+  .dashboard-container {
+    max-width: 375px;
+  }
+  
+  .chart-height {
+    height: 180px;
+  }
+}
+
+/* Large Mobile - 425px to 767px */
+@media (min-width: 425px) and (max-width: 767px) {
+  .dashboard-container {
+    max-width: 425px;
+  }
+  
+  .chart-height {
+    height: 200px;
+  }
+  
+  .invoice-card {
+    padding: 16px;
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .tablet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .chart-height {
+    height: 240px;
+  }
+  
+  .tablet-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Laptop - 1024px to 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .laptop-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .chart-height {
+    height: 280px;
+  }
+  
+  .laptop-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Laptop/Desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .desktop-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+  }
+  
+  .chart-height {
+    height: 320px;
+  }
+  
+  .desktop-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .desktop-invoice-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .dashboard-container {
+    max-width: none;
+    box-shadow: none;
+  }
+  
+  .print-friendly {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .landscape-header {
+    padding: 8px 16px;
+  }
+  
+  .landscape-chart {
+    height: 160px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-bg {
+    background-color: #1a1a1a;
+  }
+  
+  .dark-mode-text {
+    color: #ffffff;
+  }
+  
+  .dark-mode-card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
